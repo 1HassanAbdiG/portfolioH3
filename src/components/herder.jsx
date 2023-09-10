@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import styles from "../styles/header.module.css";
 import myPhoto from "../imges/hassan.png"; // Importez votre photo
 import { Link } from 'react-router-dom';
-import Pdf from"../doc/FORMATION.pdf"
+import Pdf from"../doc/CVHassan.pdf"
 
 const Header = () => {
   const [navActive, setNavActive] = useState(false);
