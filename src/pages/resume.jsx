@@ -1,5 +1,5 @@
 
-import Pdf from"../doc/FACTUREPPI_7.pdf"
+import Pdf from"../doc/CVHassan.pdf"
 
 
 
