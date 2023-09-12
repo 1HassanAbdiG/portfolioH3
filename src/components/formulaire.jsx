@@ -34,9 +34,9 @@ const validate = (values) => {
 export default function Formulaire() {
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         try {
-            await axios.post("https://ahead-sugared-jade.glitch.me/send-email", values);
+            await axios.post("http://localhost:3004/send-email", values);
             alert("E-mail envoyé avec succès !");
-            resetForm({ values: {} }); // Réinitialiser le formulaire avec un objet vide
+            resetForm(); // Réinitialiser le formulaire
         } catch (error) {
             alert("Une erreur s'est produite lors de l'envoi de l'e-mail.");
             console.error(error);
@@ -46,7 +46,7 @@ export default function Formulaire() {
            
 
         }
-        window.reload()
+       
 
 
     };
@@ -72,7 +72,7 @@ export default function Formulaire() {
                 {(formik) => (
                     <div className="conteneur1">
                         <h1>Envoyer un message</h1>
-                        <form action="mailto:someone@example.com" method="post" enctype="text/plain"></form>
+                        
                         <form onSubmit={formik.handleSubmit}
                             action="mailto:someone@example.com"
                             method="post"
